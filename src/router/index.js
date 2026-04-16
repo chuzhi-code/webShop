@@ -23,8 +23,10 @@ const router = createRouter({
     {
       path: '/',
       component: Layout,
+      // 在Layout内部变化的路由（二级路由）
       children: [
         {
+          // ''：默认路由，访问/时，跳转到/home
           path: '',
           component: Home
         },
