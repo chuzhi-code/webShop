@@ -1,17 +1,9 @@
+<!-- 首页banner轮播图 -->
+ <!-- 使用element-plus的carousel组件 -->
 <script setup>
-import { getBannerAPI } from '@/apis/home'
-import { onMounted, ref } from 'vue'
-
-const bannerList = ref([])
-
-const getBanner = async () => {
-  const res = await getBannerAPI()
-  console.log(res)
-  bannerList.value = res.result
-}
-
-onMounted(() => getBanner())
-
+import { storeToRefs } from 'pinia'
+import { useBannerStore } from '@/stores/banner'
+const { bannerList } = storeToRefs(useBannerStore())
 </script>
 
 

@@ -1,6 +1,6 @@
 <script setup>
 import LayoutHeaderUl from './LayoutHeaderUl.vue'
-// vueUse
+// vueUse（获取滚动位置）
 import { useScroll } from '@vueuse/core'
 const { y } = useScroll(window)
 
@@ -12,7 +12,7 @@ const { y } = useScroll(window)
     <div class="container">
       <RouterLink class="logo" to="/" />
       <!-- 导航区域 -->
-
+      <!-- 通过封装的组件LayoutHeaderUl，优化列表获取，避免重复获取 -->
       <LayoutHeaderUl />
       <div class="right">
         <RouterLink to="/">品牌</RouterLink>

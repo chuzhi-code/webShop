@@ -5,13 +5,13 @@ import LayoutHeader from './components/LayoutHeader.vue'
 import LayoutFooter from './components/LayoutFooter.vue'
 import LayoutFixed from './components/LayoutFixed.vue'
 
-// 触发获取导航列表的action
-
+// 通过pinia管理公共数据categoryList
+// 触发获取导航列表的action，获取导航列表categoryList供子组件使用
 import { useCategoryStore } from '@/stores/categoryStore'
 import { onMounted } from 'vue'
 
 const categoryStore = useCategoryStore()
-
+// 必要！！触发获取导航列表的action
 onMounted(() => categoryStore.getCategory())
 </script>
 

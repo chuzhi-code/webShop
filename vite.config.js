@@ -30,6 +30,7 @@ export default defineConfig({
     }
   },
   css: {
+    // 配置scss预处理器选项
     preprocessorOptions: {
       scss: {
         // 2. 自动导入定制化样式文件进行样式覆盖

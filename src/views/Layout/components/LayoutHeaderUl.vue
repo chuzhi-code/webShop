@@ -1,5 +1,6 @@
 <script setup>
 import { useCategoryStore } from '@/stores/categoryStore'
+// 实例化categoryStore，获取导航列表categoryList
 const categoryStore = useCategoryStore()
 </script>
 
