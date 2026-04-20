@@ -2,6 +2,7 @@
 defineProps({
   goods: {
     tppe: Object,
+    // 默认使用函数返回一个空对象，避免所有使用此组件的实例共享同一个对象
     default: () => { }
   }
 })

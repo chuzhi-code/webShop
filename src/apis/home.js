@@ -5,6 +5,8 @@ import httpInstance from '@/utils/http'
 
 export function getBannerAPI (params = {}) {
   // 默认为1 商品为2
+  // 目标：根据distributionSite参数获取bannerbanner数据
+  // distributionSite：1 为首页banner 2 为商品页banner
   const { distributionSite = '1' } = params
   return httpInstance({
     url: '/home/banner',

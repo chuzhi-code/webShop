@@ -13,6 +13,7 @@ const { categoryData } = useCategory()
   <div class="top-category">
     <div class="container m-top-20">
       <!-- 面包屑 -->
+       <!-- 面包屑：显示当前页面在网站中的位置，方便用户导航 -->
       <div class="bread-container">
         <el-breadcrumb separator=">">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
@@ -27,6 +28,7 @@ const { categoryData } = useCategory()
           </el-carousel-item>
         </el-carousel>
       </div>
+      <!-- 子分类列表 -->
       <div class="sub-list">
         <h3>全部分类</h3>
         <ul>
@@ -38,6 +40,8 @@ const { categoryData } = useCategory()
           </li>
         </ul>
       </div>
+      <!-- 商品列表 -->
+      <!-- 商品列表：根据分类id获取商品列表数据 -->
       <div class="ref-goods" v-for="item in categoryData.children" :key="item.id">
         <div class="head">
           <h3>- {{ item.name }}-</h3>

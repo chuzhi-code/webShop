@@ -21,6 +21,7 @@ export const lazyPlugin = {
             if (isIntersecting) {
               // 进入视口区域
               el.src = binding.value
+              // 图片加载完成后，停止监听元素是否进入视口区域
               stop()
             }
           },
