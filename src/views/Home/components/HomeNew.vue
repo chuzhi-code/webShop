@@ -12,7 +12,7 @@ const getNewList = async () => {
 }
 
 onMounted(() => getNewList())
-
+console.log(newList) 
 </script>
 
 <template>
